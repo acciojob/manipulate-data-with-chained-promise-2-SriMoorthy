@@ -3,8 +3,7 @@ function getData() {
 	return new Promise((resolve)=>{
 		setTimeout(()=>{
 			const numbers = [1,2,3,4]
-			resolve(numbers)
-			filterEvenNum()
+			resolve(filterEvenNum(numbers))
 		},3000)
 	})
 }
@@ -14,8 +13,7 @@ function filterEvenNum(numbers) {
 		setTimeout(()=>{
 			const evenNum = numbers.filter(num => num % 2 == 0)
 			document.getElimentById("output").textcontent = evenNum.join(',')
-			resolve(evenNum);
-			multipleByTwo()
+			resolve(multipleByTwo(evenNum));
 		},1000)
 	})
 }
