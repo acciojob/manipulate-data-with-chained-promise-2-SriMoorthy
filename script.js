@@ -38,14 +38,14 @@ getNumbers()
     .then(numbers => {
         // Filter even numbers and update output
         return filterEvenNumbers(numbers).then(evenNumbers => {
-            updateOutput(`Even numbers: ${evenNumbers.join(', ')}`);
+            updateOutput(`Even numbers: ${evenNumbers.join(',')}`);
             return evenNumbers;
         });
     })
     .then(evenNumbers => {
         // Multiply by two and update output
         return multiplyByTwo(evenNumbers).then(multipliedNumbers => {
-            updateOutput(`Multiplied numbers: ${multipliedNumbers.join(', ')}`);
+            updateOutput(`Multiplied numbers: ${multipliedNumbers.join(',')}`);
         });
     })
     .catch(err => {
